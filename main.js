@@ -21,18 +21,22 @@ async function getArticles(){
     const res = await fetch(topHeadlinesUrl);
     const json = await res.json();  
     articles= json.articles;
+    for(let i=0; i<10;i++){
+      newsArticleList.add = articles[i];
+    }
+    console.log(articles);
+    index+=10
   }
   
 
 add.onclick = function() {
     try {
-      for(let i=index; i<index+10;i++){
-
+      for(let i=index; i<index+2;i++){
         newsArticleList.add = articles[i];
       }
     } catch (error) {
       alert("Sorry, no new articles. Please visit us later")
     }
-    index+=10;
+    index+=2;
   };
 

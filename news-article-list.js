@@ -9,7 +9,7 @@ export class NewsArticleList extends HTMLElement{
   
   
   set add(value){
-        this._articles.push(value);
+        this._articles.unshift(value)
         this.render();   
   }
 
