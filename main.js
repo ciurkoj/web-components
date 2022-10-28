@@ -3,12 +3,12 @@ import './news-article-list.js';
 
 
 const apiKey = '39bf5420207e40b69da312041255892a';
-const topHeadlinesUrl =
-  'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey;
+const topHeadlinesUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey;
 
 
   window.addEventListener('load', () => {
     getArticles();
+    registerServiceWorker();
   });
 
 const newsArticleList = document.getElementById('news-article-list');
@@ -40,3 +40,13 @@ add.onclick = function() {
     index+=2;
   };
 
+  async function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('./service-worker.js');
+      } catch (e) {
+        console.log(`Service Worker registration failed`);
+      }
+    }
+  }
+  

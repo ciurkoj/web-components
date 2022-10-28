@@ -120,7 +120,7 @@ class NewsArticle extends HTMLElement{
         return `
           <div class="news-article">
              <div class="urlToImage">
-                  <img src="${this.urlToImage ? this.urlToImage : 'dupa'}">
+                  <img src="${this.urlToImage ? this.urlToImage : ''}">
               </div>
              <h2>${this.title}</h2>
              <p>${this.description}</p>
