@@ -7,10 +7,6 @@ export class NewsArticleList extends HTMLElement{
     this.attachShadow({mode: 'open'});
   }
   
-  set articles(value) {
-    this._articles = value;
-    this.render();
-  }
   
   set add(value){
         this._articles.push(value);
