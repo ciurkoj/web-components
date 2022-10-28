@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="#" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="wrapper">
+		<h1 id="logo">Lorem ipsum</h1>
+	</header>
+	<section role="banner" id="banner">
+		<h2>News Articles</h2>
+
+		<button class="add">Load more articles</button>
+	</section>
+
+	<main class="wrapper">
+		<news-article-list id="news-article-list">
+			<h2 slot="heading">Latest News</h2>
+		</news-article-list>
+	</main>
+
+	<script src="main.js" type="module"></script>
+</body>
+</html>
